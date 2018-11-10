@@ -128,7 +128,7 @@ function addForm() {
 function addLine () {
 	// precondition: inputWidth global variable must be set
 	// precondition: call from addForm() so HTML element with id="fieldset1" exists
-	addField("fieldset1", "givenname", "Given Name", "text", "Jane", "Doe",inputWidth);
+	addField("fieldset1", "Given Name", "Given Name", "text", "Jane", "Doe",inputWidth);
 	addField("fieldset1", "surname", "Surname", "text", "Doe", inputWidth);
 	addField("fieldset1", "sbd", "Solar Birth Day", "number", "1", inputWidth);
   addField("fieldset1", "sbm", "Solar Birth Month", "number", "1", inputWidth);
@@ -174,10 +174,10 @@ function genObjectArray() {
 	for(i = 0; i < currentLine; i++) {
 		objArray[i] = {
 			'givenname'     :document.getElementById("Given Name"+i).value,
-			'surname'     :document.getElementById("Surname"+i).value,
-			'sbd'       :document.getElementByID("Solar Birth Day"+i).value, 
-			'sbm'   :document.getElementById("Solar Birth Month"+i).value,
-      'sby'   :document.getElementById("Solar Birth Year"+i).value,
+			'surname'     :document.getElementById("surname"+i).value,
+			'sbd'       :document.getElementByID("sbd"+i).value, 
+			'sbm'   :document.getElementById("sbm"+i).value,
+      'sby'   :document.getElementById("sby"+i).value,
       'country'    :document.getElementById("Country"+i).value
 				}
 		};
