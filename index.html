@@ -90,7 +90,7 @@ function addForm() {
 	// create a new label element, and append to fieldset1
 	var newelement = document.createElement("label");
 	newelement.setAttribute("for","givenname"+currentLine);
-	var textnode = document.createTextNode("First");
+	var textnode = document.createTextNode("Given Name");
 	newelement.appendChild(textnode);
 	var fieldset1 = document.getElementById("fieldset1");
 	fieldset1.appendChild(newelement);
@@ -173,12 +173,12 @@ function genObjectArray() {
 	// generate objArray from HTML form elements
 	for(i = 0; i < currentLine; i++) {
 		objArray[i] = {
-			'givenname'     :document.getElementById("fname"+i).value,
-			'surname'     :document.getElementById("lname"+i).value,
-			'sbd'       :document.getElementByID("sbd"+i).value, 
-			'sbm'   :document.getElementById("sbm"+i).value,
-      'sby'   :document.getElementById("sby"+i).value,
-      'country'    :document.getElementById("country"+i).value
+			'givenname'     :document.getElementById("Given Name"+i).value,
+			'surname'     :document.getElementById("Surname"+i).value,
+			'sbd'       :document.getElementByID("Solar Birth Day"+i).value, 
+			'sbm'   :document.getElementById("Solar Birth Month"+i).value,
+      'sby'   :document.getElementById("Solar Birth Year"+i).value,
+      'country'    :document.getElementById("Country"+i).value
 				}
 		};
 	
