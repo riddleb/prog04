@@ -274,7 +274,7 @@ function genObjectArray() {
 		
 		var tableContent = "<tbody>";
 		objArray.forEach(function(e) {
-			if (this.country == USA){
+			if (this.country == "USA"){
 			tableContent += '<tr>';
 			tableContent +=  '<td>' + (this.givenName + this.surname) + '</td>'
 			tableContent +=  '<td>' + (this.sbm + "/" + this.sbd + "/" + this.sby) + '</td>'
