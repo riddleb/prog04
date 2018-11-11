@@ -199,12 +199,13 @@ function genObjectArray() {
 			'sbd' :document.getElementById("sbd"+i).value, 
 			'sbm' :document.getElementById("sbm"+i).value,
       			'sby' :document.getElementById("sby"+i).value,
+			'age' :2018 - document.getElementById("sby"+i).value,
       			'country' :document.getElementById("country"+i).value
 			'countryAge':function () {
 				if('China'==this.country)
-					return parseInt(2018 - this.sby.value)+1; 
+					return parseInt(this.age)+1; 
 				else 
-					return parseInt(2018 - this.sby.value);
+					return parseInt(this.age);
 				}
 
 			
