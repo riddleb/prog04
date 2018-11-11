@@ -90,7 +90,7 @@ function addForm() {
 	// create a new label element, and append to fieldset1
 	var newelement = document.createElement("label");
 	newelement.setAttribute("for","givenname"+currentLine);
-	var textnode = document.createTextNode("Given Name");
+	var textnode = document.createTextNode("Given");
 	newelement.appendChild(textnode);
 	var fieldset1 = document.getElementById("fieldset1");
 	fieldset1.appendChild(newelement);
@@ -108,9 +108,9 @@ function addForm() {
 
 	// add more fields 
 	addField("fieldset1", "surname", "Surname", "text", "Doe", inputWidth);
-	addField("fieldset1", "sbd", "Solar Birth Day", "number", "1", inputWidth);
-  addField("fieldset1", "sbm", "Solar Birth Month", "number", "1", inputWidth);
-  addField("fieldset1", "sby", "Solar Birth Year", "number", "1990", inputWidth);
+	addField("fieldset1", "sbd", "Day", "number", "1", inputWidth);
+  addField("fieldset1", "sbm", "Month", "number", "1", inputWidth);
+  addField("fieldset1", "sby", "Year", "number", "1990", inputWidth);
 	addField("fieldset1", "country", "Country", "text", "USA", inputWidth);
 
 	// add line break 
@@ -128,11 +128,11 @@ function addForm() {
 function addLine () {
 	// precondition: inputWidth global variable must be set
 	// precondition: call from addForm() so HTML element with id="fieldset1" exists
-	addField("fieldset1", "Given Name", "Given Name", "text", "Jane", "Doe",inputWidth);
+	addField("fieldset1", "Given Name", "Given", "text", "Jane", "Doe",inputWidth);
 	addField("fieldset1", "surname", "Surname", "text", "Doe", inputWidth);
-	addField("fieldset1", "sbd", "Solar Birth Day", "number", "1", inputWidth);
-  addField("fieldset1", "sbm", "Solar Birth Month", "number", "1", inputWidth);
-  addField("fieldset1", "sby", "Solar Birth Year", "number", "1990", inputWidth);
+	addField("fieldset1", "sbd", "Day", "number", "1", inputWidth);
+  addField("fieldset1", "sbm", "Month", "number", "1", inputWidth);
+  addField("fieldset1", "sby", "Year", "number", "1990", inputWidth);
 	addField("fieldset1", "country", "Country", "text", "USA", inputWidth);
 	var newelement = document.createElement("br");
 	var fieldset1 = document.getElementById("fieldset1");
