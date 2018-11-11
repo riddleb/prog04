@@ -102,7 +102,7 @@ function addForm() {
 	// create a new input element, and append to fieldset1
 	var newelement = document.createElement("input");
 	newelement.setAttribute("name","givenname"+currentLine);
-	newelement.setAttribute("id","Given Name"+currentLine);
+	newelement.setAttribute("id","givenName"+currentLine);
 	newelement.setAttribute("type","text");
 	newelement.setAttribute("placeholder","Jane");
 	newelement.setAttribute("size",10);
@@ -132,7 +132,7 @@ function addForm() {
 function addLine () {
 	// precondition: inputWidth global variable must be set
 	// precondition: call from addForm() so HTML element with id="fieldset1" exists
-	addField("fieldset1", "Given Name", "Given", "text", "Jane",inputWidth);
+	addField("fieldset1", "givenName", "Given", "text", "Jane",inputWidth);
 	addField("fieldset1", "surname", "Surname", "text", "Doe", inputWidth);
 	addField("fieldset1", "sbd", "Day", "number", "1", inputWidth);
   addField("fieldset1", "sbm", "Month", "number", "1", inputWidth);
@@ -200,7 +200,7 @@ function genObjectArray() {
 	// generate objArray from HTML form elements
 	for(i = 0; i < currentLine; i++) {
 		objArray[i] = {
-			'givenname' :document.getElementById("Given Name"+i).value,
+			'givenname' :document.getElementById("givenName"+i).value,
 			'surname' :document.getElementById("surname"+i).value,
 			'sbd' :document.getElementById("sbd"+i).value, 
 			'sbm' :document.getElementById("sbm"+i).value,
@@ -269,6 +269,30 @@ function genObjectArray() {
 		var node = document.createTextNode("Local Zodiac");
 		title4.appendChild(node);
 		document.getElementById("hrow1").appendChild(title4);
+		
+		
+		
+		var tableContent = "<tbody>";
+		objArray.forEach(function(e) {
+			if (this.country == USA){
+			tableContent += '<tr>';
+			tableContent +=  '<td>' + (this.givenName + this.surname) + '</td>'
+			tableContent +=  '<td>' + (this.sbm + "/" + this.sbd + "/" + this.sby) + '</td>'
+			tableContent +=  '<td>' + (2018 - this.sby) + '</td>'
+			tableContent +=  '<td>' + (this.givenName + this.surname) + '</td>'
+			tableContent += '</tr>'
+			}
+			else{ 
+			tableContent += '<tr>';
+			tableContent +=  '<td>' + (this.surname + this.givenName) + '</td>'
+			tableContent +=  '<td>' + (this.sby + "/" + this.sbm + "/" + this.sbd) + '</td>'
+			tableContent +=  '<td>' + ((2018 - this.sby) + 1) + '</td>'
+			tableContent +=  '<td>' + (this.givenName + this.surname) + '</td>'
+			tableContent += '</tr>';	
+			}
+	});
+	divContent += "</ol>";
+	document.getElementById("div2").innerHTML = divContent;
 		
 	}
 	
