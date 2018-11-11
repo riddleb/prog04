@@ -155,7 +155,27 @@ function addField(formId, namePrefix, labelText, dataType, placeholder, fieldSiz
 	n.appendChild(t);
 	var f = document.getElementById(formId);
 	f.appendChild(n);
+	if (namePrefix == country){
+		var n = document.createElement("select");
+		n.setAttribute("name",namePrefix+currentLine);
+		n.setAttribute("id",namePrefix+currentLine);
+		var f = document.getElementById(formId);
+		f.appendChild(n);
+		
+		var newoption = document.createElement("option");
+		var textnode = document.createTextNode("USA");
+		newoption.appendChild(textnode);
+		var select = document.getElementById("select");
+		select.appendChild(newoption);
+		
+		var newoption = document.createElement("option");
+		var textnode = document.createTextNode("China");
+		newoption.appendChild(textnode);
+		var select = document.getElementById("select");
+		select.appendChild(newoption);
 
+	    }
+	else{
 	// create a new input element, and append to form
 	var n = document.createElement("input");
 	n.setAttribute("name",namePrefix+currentLine);
@@ -165,6 +185,7 @@ function addField(formId, namePrefix, labelText, dataType, placeholder, fieldSiz
 	n.setAttribute("size",fieldSize);
 	var f = document.getElementById(formId);
 	f.appendChild(n);
+}
 }
 
 
