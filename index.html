@@ -278,7 +278,7 @@ function genObjectArray() {
 		
 		
 		var tableContent = " ";
-		for (var i = 0; i < rows.length; i++) 
+		for (var i = 0; i < rows.length; i++) {
 			if (this.country == "USA"){
 			tableContent += '<tr>';
 			tableContent +=  '<td>' + (objArray[i].givenname + objArray[i].surname) + '</td>';
@@ -295,7 +295,7 @@ function genObjectArray() {
 			tableContent +=  '<td>' + (this.givenName + this.surname) + '</td>';
 			tableContent += '</tr>';	
 			}
-	});
+	}
 	document.getElementById("tbody1").innerHTML = tableContent;
 		
 	}
