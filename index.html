@@ -163,16 +163,18 @@ function addField(formId, namePrefix, labelText, dataType, placeholder, fieldSiz
 		f.appendChild(n);
 		
 		var newoption = document.createElement("option");
+		newoption.setAttribute("value","USA");
 		var textnode = document.createTextNode("USA");
 		newoption.appendChild(textnode);
-		var select = document.getElementById("select");
-		select.appendChild(newoption);
+		var s = document.getElementById(namePrefix + currentLine);
+		s.appendChild(newoption);
 		
 		var newoption = document.createElement("option");
+		newoption.setAttribute("value","China");
 		var textnode = document.createTextNode("China");
 		newoption.appendChild(textnode);
-		var select = document.getElementById("select");
-		select.appendChild(newoption);
+		var s = document.getElementById(namePrefix + currentLine);
+		s.appendChild(newoption);
 
 	    }
 	else{
