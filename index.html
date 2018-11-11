@@ -202,9 +202,9 @@ function genObjectArray() {
       			'country' :document.getElementById("country"+i).value
 			'countryAge':function () {
 				if('China'==this.country)
-					return parseInt(2018 - this.sby)+1; 
+					return parseInt(2018 - this.sby.value)+1; 
 				else 
-					return parseInt(2018 - this.sby);
+					return parseInt(2018 - this.sby.value);
 				}
 
 			
