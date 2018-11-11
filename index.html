@@ -282,8 +282,8 @@ function genObjectArray() {
 			if (this.country == "USA"){
 			tableContent += '<tr>';
 			tableContent +=  '<td>' + (objArray[i].givenname + objArray[i].surname) + '</td>';
-			tableContent +=  '<td>' + (this.sbm + "/" + this.sbd + "/" + this.sby) + '</td>';
-			tableContent +=  '<td>' + (2018 - this.sby) + '</td>';
+			tableContent +=  '<td>' + (objArray[i].sbm + "/" + objArray[i].sbd + "/" + objArray[i].sby) + '</td>';
+			tableContent +=  '<td>' + (2018 - objArray[i].sby) + '</td>';
 			tableContent +=  '<td>' + (this.givenname + this.surname) + '</td>';
 			tableContent += '</tr>';
 			}
