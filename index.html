@@ -281,18 +281,18 @@ function genObjectArray() {
 		objArray.forEach(function(e) {
 			if (this.country == "USA"){
 			tableContent += '<tr>';
-			tableContent +=  '<td>' + JSON.stringify(givenname + surname) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(sbm + "/" + sbd + "/" + sby) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(2018 - sby) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(givenname + surname) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(e.givenname + e.surname) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(e.sbm + "/" + e.sbd + "/" + e.sby) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(2018 - e.sby) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(e.givenname + e.surname) + '</td>'
 			tableContent += '</tr>'
 			}
 			else{ 
 			tableContent += '<tr>';
-			tableContent +=  '<td>' + JSON.stringify(this.surname + this.givenName) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(this.sby + "/" + this.sbm + "/" + this.sbd) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify((2018 - this.sby) + 1) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(this.givenName + this.surname) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(e.surname + e.givenName) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(e.sby + "/" + e.sbm + "/" + this.sbd) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify((2018 - e.sby) + 1) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(e.givenName + e.surname) + '</td>'
 			tableContent += '</tr>';	
 			}
 	});
