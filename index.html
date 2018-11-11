@@ -173,12 +173,20 @@ function genObjectArray() {
 	// generate objArray from HTML form elements
 	for(i = 0; i < currentLine; i++) {
 		objArray[i] = {
-			'givenname'     :document.getElementById("Given Name"+i).value,
-			'surname'     :document.getElementById("surname"+i).value,
-			'sbd'       :document.getElementById("sbd"+i).value, 
-			'sbm'   :document.getElementById("sbm"+i).value,
-      'sby'   :document.getElementById("sby"+i).value,
-      'country'    :document.getElementById("country"+i).value
+			'givenname' :document.getElementById("Given Name"+i).value,
+			'surname' :document.getElementById("surname"+i).value,
+			'sbd' :document.getElementById("sbd"+i).value, 
+			'sbm' :document.getElementById("sbm"+i).value,
+      			'sby' :document.getElementById("sby"+i).value,
+      			'country' :document.getElementById("country"+i).value
+			'countryAge':function () {
+				if('China'==this.country)
+					return parseInt(2018 - this.sby)+1; 
+				else 
+					return parseInt(2018 - this.sby);
+				}
+
+			
 				}
 		};
 	
