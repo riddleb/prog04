@@ -278,10 +278,10 @@ function genObjectArray() {
 		
 		
 		var tableContent = " ";
-		objArray.forEach(function(e) {
+		for (var i = 0; i < rows.length; i++) 
 			if (this.country == "USA"){
 			tableContent += '<tr>';
-			tableContent +=  '<td>' + givenname.value + '</td>';
+			tableContent +=  '<td>' + (objArray[i].givenname + objArray[i].surname) + '</td>';
 			tableContent +=  '<td>' + (this.sbm + "/" + this.sbd + "/" + this.sby) + '</td>';
 			tableContent +=  '<td>' + (2018 - this.sby) + '</td>';
 			tableContent +=  '<td>' + (this.givenname + this.surname) + '</td>';
@@ -289,10 +289,10 @@ function genObjectArray() {
 			}
 			else{ 
 			tableContent += '<tr>';
-			tableContent +=  '<td>' + JSON.stringify(this.surname + this.givenName) + '</td>';
-			tableContent +=  '<td>' + JSON.stringify(this.sby + "/" + this.sbm + "/" + this.sbd) + '</td>';
-			tableContent +=  '<td>' + JSON.stringify((2018 - this.sby) + 1) + '</td>';
-			tableContent +=  '<td>' + JSON.stringify(this.givenName + this.surname) + '</td>';
+			tableContent +=  '<td>' + (this.surname + this.givenName) + '</td>';
+			tableContent +=  '<td>' + (this.sby + "/" + this.sbm + "/" + this.sbd) + '</td>';
+			tableContent +=  '<td>' + ((2018 - this.sby) + 1) + '</td>';
+			tableContent +=  '<td>' + (this.givenName + this.surname) + '</td>';
 			tableContent += '</tr>';	
 			}
 	});
