@@ -225,9 +225,49 @@ function genObjectArray() {
 	document.getElementById("div2").innerHTML = divContent;
 }
 
-/* genTable()
- * generates an HTML table containing localized output from 
- */
+	genTable(){
+		var t = document.createElement("table class = table table-striped");
+		t.setAttribute("id","table1");
+		var div3 = document.getElementById("div3");
+		div3.appendChild(t);
+		
+		var h = document.createElement("thead");
+		h.setAttribute("id","thead1");
+		var table = document.getElementById("table1");
+		table.appendChild(h);
+		
+		var r = document.createElement("row");
+		r.setAttribute("id","hrow1");
+		var head = document.getElementById("thead1");
+		head.appendChild(r);
+		
+		var title1 = document.createElement("th");
+		h.setAttribute("id","title1");
+		var node = document.createTextNode("Local Name");
+		title1.appendChild(node);
+		document.getElementById("hrow1").appendChild(title1);
+		
+		var title2 = document.createElement("th");
+		h.setAttribute("id","title2");
+		var node = document.createTextNode("Local DOB");
+		title2.appendChild(node);
+		document.getElementById("hrow1").appendChild(title2);
+		
+		var title3 = document.createElement("th");
+		h.setAttribute("id","title3");
+		var node = document.createTextNode("Local Age");
+		title3.appendChild(node);
+		document.getElementById("hrow1").appendChild(title3);
+		
+		var title4 = document.createElement("th");
+		h.setAttribute("id","title4");
+		var node = document.createTextNode("Local Zodiac");
+		title4.appendChild(node);
+		document.getElementById("hrow1").appendChild(title4);
+		
+		
+	}
+ 
 
 			</script>
 			
