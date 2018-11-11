@@ -101,7 +101,7 @@ function addForm() {
 	newelement.setAttribute("id","Given Name"+currentLine);
 	newelement.setAttribute("type","text");
 	newelement.setAttribute("placeholder","Jane");
-	newelement.setAttribute("size",inputWidth);
+	newelement.setAttribute("size",10);
 	if (currentLine==0) newelement.setAttribute("autofocus","autofocus");
 	var fieldset1 = document.getElementById("fieldset1");
 	fieldset1.appendChild(newelement);
@@ -128,7 +128,7 @@ function addForm() {
 function addLine () {
 	// precondition: inputWidth global variable must be set
 	// precondition: call from addForm() so HTML element with id="fieldset1" exists
-	addField("fieldset1", "Given Name", "Given", "text", "Jane", "Doe",inputWidth);
+	addField("fieldset1", "Given Name", "Given", "text", "Jane",inputWidth);
 	addField("fieldset1", "surname", "Surname", "text", "Doe", inputWidth);
 	addField("fieldset1", "sbd", "Day", "number", "1", inputWidth);
   addField("fieldset1", "sbm", "Month", "number", "1", inputWidth);
