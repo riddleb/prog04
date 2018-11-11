@@ -270,16 +270,21 @@ function genObjectArray() {
 		title4.appendChild(node);
 		document.getElementById("hrow1").appendChild(title4);
 		
+		var b = document.createElement("tbody");
+		b.setAttribute("id","body1");
+		var table = document.getElementById("table1");
+		table.appendChild(b);
 		
 		
-		var tableContent = "<tbody>";
+		
+		var tableContent = "";
 		objArray.forEach(function(e) {
 			if (this.country == "USA"){
 			tableContent += '<tr>';
-			tableContent +=  '<td>' + JSON.stringify(this.givenName + this.surname) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(this.sbm + "/" + this.sbd + "/" + this.sby) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(2018 - this.sby) + '</td>'
-			tableContent +=  '<td>' + JSON.stringify(this.givenName + this.surname) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(givenname + surname) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(sbm + "/" + sbd + "/" + sby) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(2018 - sby) + '</td>'
+			tableContent +=  '<td>' + JSON.stringify(givenname + surname) + '</td>'
 			tableContent += '</tr>'
 			}
 			else{ 
@@ -291,7 +296,6 @@ function genObjectArray() {
 			tableContent += '</tr>';	
 			}
 	});
-	tableContent += "</tbody>";
 	document.getElementById("table1").innerHTML = tableContent;
 		
 	}
