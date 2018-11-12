@@ -236,14 +236,19 @@ function genObjectArray() {
 		var div3 = document.getElementById("div3");
 		div3.appendChild(t);
 				
-		var h = document.createElement("thead");
-		h.setAttribute("id","thead1");
+		//var h = document.createElement("thead");
+		//h.setAttribute("id","thead1");
+		//var table = document.getElementById("table1");
+		//table.appendChild(h);
+		
+		var b = document.createElement("tbody");
+		b.setAttribute("id","tbody1");
 		var table = document.getElementById("table1");
-		table.appendChild(h);
+		table.appendChild(b);
 		
 		var r = document.createElement("row");
 		r.setAttribute("id","hrow1");
-		var head = document.getElementById("thead1");
+		var head = document.getElementById("tbody1");
 		head.appendChild(r);
 		
 		var title1 = document.createElement("td");
@@ -274,10 +279,7 @@ function genObjectArray() {
 		document.getElementById("hrow1").appendChild(title4);
 		title4.style.width = '200px';
 		
-		var b = document.createElement("tbody");
-		b.setAttribute("id","tbody1");
-		var table = document.getElementById("table1");
-		table.appendChild(b);
+		
 		
 		for (var i = 0; i < objArray.length; i++){
 			if(objArray[i].country == "USA"){
