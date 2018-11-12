@@ -297,18 +297,18 @@ function genObjectArray() {
    			document.getElementById("tr"+i).appendChild(z);
 			
 			var zodiac
-			if(objArray[i].sbm == 1){zodiac = "capricorn"}
-			else if(objArray[i].sbm == 2){zodiac = "aquarius"}
-			else if(objArray[i].sbm == 3){zodiac = "pisces"}
-			else if(objArray[i].sbm == 4){zodiac = "aries"}
-			else if(objArray[i].sbm == 5){zodiac = "taurus"}	
-			else if(objArray[i].sbm == 6){zodiac = "gemini"}	
-			else if(objArray[i].sbm == 7){zodiac = "cancer"}	
-			else if(objArray[i].sbm == 8){zodiac = "leo"}
-			else if(objArray[i].sbm == 2){zodiac = "virgo"}
-			else if(objArray[i].sbm == 2){zodiac = "libra"}	
-			else if(objArray[i].sbm == 2){zodiac = "scorpio"}	
-			else if(objArray[i].sbm == 2){zodiac = "saggitarus"}	
+			if(objArray[i].sbm == 1){zodiac = "Capricorn"}
+			else if(objArray[i].sbm == 2){zodiac = "Aquarius"}
+			else if(objArray[i].sbm == 3){zodiac = "Pisces"}
+			else if(objArray[i].sbm == 4){zodiac = "Aries"}
+			else if(objArray[i].sbm == 5){zodiac = "Taurus"}	
+			else if(objArray[i].sbm == 6){zodiac = "Gemini"}	
+			else if(objArray[i].sbm == 7){zodiac = "Cancer"}	
+			else if(objArray[i].sbm == 8){zodiac = "Leo"}
+			else if(objArray[i].sbm == 2){zodiac = "Virgo"}
+			else if(objArray[i].sbm == 2){zodiac = "Libra"}	
+			else if(objArray[i].sbm == 2){zodiac = "Scorpio"}	
+			else if(objArray[i].sbm == 2){zodiac = "Saggitarus"}	
 				
 			var z = document.createElement("td");
     			var t = document.createTextNode(zodiac);
@@ -335,8 +335,48 @@ function genObjectArray() {
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
 			
+			var zodiac
+			    switch ((objArray[i].sby - 4) % 12) {
+				        case 0:
+					    zodiac= "Rat"
+
+					case 1:
+					    zodiac= 'Ox';
+
+					case 2:
+					    zodiac= 'Tiger';
+
+					case 3:
+					    zodiac= 'Rabbit';
+
+					case 4:
+					    zodiac= 'Dragon';
+
+					case 5:
+					    zodiac='Snake';
+
+					case 6:
+					    zodiac= 'Horse';
+
+					case 7:
+					    zodiac= 'Goat';
+
+					case 8:
+					    zodiac= 'Monkey';
+
+					case 9:
+					    zodiac= 'Rooster';
+
+					case 10:
+					    zodiac= 'Dog';
+
+					case 11:
+					    zodiac= 'Pig';
+
+    }
+			
 			var z = document.createElement("td");
-    			var t = document.createTextNode("Chinese zodiac");
+    			var t = document.createTextNode(zodiac);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
 				
