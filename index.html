@@ -275,28 +275,19 @@ function genObjectArray() {
 		var table = document.getElementById("table1");
 		table.appendChild(b);
 		
+		for (var i = 0; i < objArray.length; i++){
+		var y = document.createElement("tr");
+   		y.setAttribute("id", "tr"+i);
+   		document.getElementById("table1").appendChild(y);
+
+   		var z = document.createElement("td");
+    		var t = document.createTextNode(objArray[i].givenname+objArray[i].surname);
+    		z.appendChild(t);
+   		document.getElementById("tr"+i).appendChild(z);
+		}
+				
 		
-		
-		var tableContent = " ";
-		for (var i = 0; i < objArray.length; i++) {
-			if (this.country == "USA"){
-			tableContent += '<tr>';
-			tableContent +=  '<td>' + (objArray[i].givenname + objArray[i].surname) + '</td>';
-			tableContent +=  '<td>' + (objArray[i].sbm + "/" + objArray[i].sbd + "/" + objArray[i].sby) + '</td>';
-			tableContent +=  '<td>' + (2018 - objArray[i].sby) + '</td>';
-			tableContent +=  '<td>' + (this.givenname + this.surname) + '</td>';
-			tableContent += '</tr>';
-			}
-			else{ 
-			tableContent += '<tr>';
-			tableContent +=  '<td>' + (this.surname + this.givenName) + '</td>';
-			tableContent +=  '<td>' + (this.sby + "/" + this.sbm + "/" + this.sbd) + '</td>';
-			tableContent +=  '<td>' + ((2018 - this.sby) + 1) + '</td>';
-			tableContent +=  '<td>' + (this.givenName + this.surname) + '</td>';
-			tableContent += '</tr>';	
-			}
-	}
-	document.getElementById("tbody1").innerHTML = tableContent;
+
 		
 	}
 	
