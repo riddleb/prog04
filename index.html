@@ -290,19 +290,19 @@ function genObjectArray() {
     			var t = document.createTextNode(objArray[i].givenname+ " " +objArray[i].surname);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
-		        z.style.width = '800px';
+		        z.style.width = '200px';
 			
 			var z = document.createElement("td");
     			var t = document.createTextNode(objArray[i].sbm + "/" + objArray[i].sbd + "/" + objArray[i].sby);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
-			z.style.width = '800px';
+			z.style.width = '200px';
 			
 			var z = document.createElement("td");
     			var t = document.createTextNode(2018 - objArray[i].sby);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
-			z.style.width = '800px';
+			z.style.width = '200px';
 			
 			var zodiac
 			if(objArray[i].sbm == 1){zodiac = "Capricorn"}
@@ -322,7 +322,7 @@ function genObjectArray() {
     			var t = document.createTextNode(zodiac);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
-			z.style.width = '800px';
+			z.style.width = '200px';
 			}
 		else{
 			var y = document.createElement("tr");
