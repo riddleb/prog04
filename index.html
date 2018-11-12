@@ -284,21 +284,25 @@ function genObjectArray() {
 			var y = document.createElement("tr");
    			y.setAttribute("id", "tr"+i);
    			document.getElementById("tbody1").appendChild(y);
+				
 
    			var z = document.createElement("td");
     			var t = document.createTextNode(objArray[i].givenname+ " " +objArray[i].surname);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+		        z.style.width = '200px';
 			
 			var z = document.createElement("td");
     			var t = document.createTextNode(objArray[i].sbm + "/" + objArray[i].sbd + "/" + objArray[i].sby);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+			z.style.width = '200px';
 			
 			var z = document.createElement("td");
     			var t = document.createTextNode(2018 - objArray[i].sby);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+			z.style.width = '200px';
 			
 			var zodiac
 			if(objArray[i].sbm == 1){zodiac = "Capricorn"}
@@ -318,6 +322,7 @@ function genObjectArray() {
     			var t = document.createTextNode(zodiac);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+			z.style.width = '200px';
 			}
 		else{
 			var y = document.createElement("tr");
@@ -328,16 +333,19 @@ function genObjectArray() {
     			var t = document.createTextNode(objArray[i].surname+ " " +objArray[i].givenname);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+			z.style.width = '200px';
 			
 			var z = document.createElement("td");
     			var t = document.createTextNode(objArray[i].sby + "/" + objArray[i].sbm + "/" + objArray[i].sbd);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+			z.style.width = '200px';
 			
 			var z = document.createElement("td");
     			var t = document.createTextNode((2018 - objArray[i].sby)+1);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+			z.style.width = '200px';
 			
 			var zodiac
 			    switch ((objArray[i].sby - 4) % 12) {
@@ -383,6 +391,7 @@ function genObjectArray() {
     			var t = document.createTextNode(zodiac);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
+			z.style.width = '200px';
 				
 		}
 
