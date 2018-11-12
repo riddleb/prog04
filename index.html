@@ -230,22 +230,23 @@ function genObjectArray() {
 }
 	//generates a table on click
 	function genTable(){
+		//generate table
 		var t = document.createElement("table");
 		t.setAttribute("id","table1");
 		t.setAttribute("class","table table-striped");
 		var div3 = document.getElementById("div3");
 		div3.appendChild(t);
-				
+		//generate table head		
 		var h = document.createElement("thead");
 		h.setAttribute("id","thead1");
 		var table = document.getElementById("table1");
 		table.appendChild(h);
-				
+		//generate table row		
 		var r = document.createElement("tr");
 		r.setAttribute("id","hrow1");
 		var head = document.getElementById("thead1");
 		head.appendChild(r);
-		
+		//generate table headers
 		var title1 = document.createElement("th");
 		title1.setAttribute("id","title1");
 		var node = document.createTextNode("Local Name");
@@ -280,8 +281,9 @@ function genObjectArray() {
 		table.appendChild(b);
 		
 		
-		
+		//fill table with data from object array
 		for (var i = 0; i < objArray.length; i++){
+			//local data for USA
 			if(objArray[i].country == "USA"){
 			var y = document.createElement("tr");
    			y.setAttribute("id", "tr"+i);
@@ -305,7 +307,7 @@ function genObjectArray() {
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
 			z.style.width = '200px';
-			
+			//american zodiac signs
 			var zodiac
 			if(objArray[i].sbm == 1){zodiac = "Capricorn"}
 			else if(objArray[i].sbm == 2){zodiac = "Aquarius"}
@@ -326,6 +328,7 @@ function genObjectArray() {
    			document.getElementById("tr"+i).appendChild(z);
 			z.style.width = '200px';
 			}
+		//local data for China
 		else{
 			var y = document.createElement("tr");
    			y.setAttribute("id", "tr"+i);
@@ -348,7 +351,7 @@ function genObjectArray() {
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
 			z.style.width = '200px';
-			
+			//Chinese zodiac signs
 			var zodiac
 			    switch ((objArray[i].sby - 4) % 12) {
 				        case 0:
