@@ -278,9 +278,24 @@ function genObjectArray() {
 		for (var i = 0; i < objArray.length; i++){
 		var y = document.createElement("tr");
    		y.setAttribute("id", "tr"+i);
-   		document.getElementById("table1").appendChild(y);
+   		document.getElementById("tbody1").appendChild(y);
 
    		var z = document.createElement("td");
+    		var t = document.createTextNode(objArray[i].givenname+ " " +objArray[i].surname);
+    		z.appendChild(t);
+   		document.getElementById("tr"+i).appendChild(z);
+			
+		var z = document.createElement("td");
+    		var t = document.createTextNode(objArray[i].sbm + "/" + objArray[i].sbd + "/" + objArray[i].sby);
+    		z.appendChild(t);
+   		document.getElementById("tr"+i).appendChild(z);
+			
+		var z = document.createElement("td");
+    		var t = document.createTextNode(2018 - objArray[i].sby);
+    		z.appendChild(t);
+   		document.getElementById("tr"+i).appendChild(z);
+			
+		var z = document.createElement("td");
     		var t = document.createTextNode(objArray[i].givenname+objArray[i].surname);
     		z.appendChild(t);
    		document.getElementById("tr"+i).appendChild(z);
