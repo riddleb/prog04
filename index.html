@@ -296,8 +296,22 @@ function genObjectArray() {
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
 			
+			var zodiac
+			if(objArray[i].sbm == 1){zodiac = "capricorn"}
+			else if(objArray[i].sbm == 2){zodiac = "aquarius"}
+			else if(objArray[i].sbm == 3){zodiac = "pisces"}
+			else if(objArray[i].sbm == 4){zodiac = "aries"}
+			else if(objArray[i].sbm == 5){zodiac = "taurus"}	
+			else if(objArray[i].sbm == 6){zodiac = "gemini"}	
+			else if(objArray[i].sbm == 7){zodiac = "cancer"}	
+			else if(objArray[i].sbm == 8){zodiac = "leo"}
+			else if(objArray[i].sbm == 2){zodiac = "virgo"}
+			else if(objArray[i].sbm == 2){zodiac = "libra"}	
+			else if(objArray[i].sbm == 2){zodiac = "scorpio"}	
+			else if(objArray[i].sbm == 2){zodiac = "saggitarus"}	
+				
 			var z = document.createElement("td");
-    			var t = document.createTextNode("American zodiac");
+    			var t = document.createTextNode(zodiac);
     			z.appendChild(t);
    			document.getElementById("tr"+i).appendChild(z);
 			}
