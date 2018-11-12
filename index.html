@@ -276,6 +276,7 @@ function genObjectArray() {
 		table.appendChild(b);
 		
 		for (var i = 0; i < objArray.length; i++){
+			if(objArray[i].country == "USA"){
 		var y = document.createElement("tr");
    		y.setAttribute("id", "tr"+i);
    		document.getElementById("tbody1").appendChild(y);
@@ -296,14 +297,38 @@ function genObjectArray() {
    		document.getElementById("tr"+i).appendChild(z);
 			
 		var z = document.createElement("td");
-    		var t = document.createTextNode(objArray[i].givenname+objArray[i].surname);
+    		var t = document.createTextNode("American zodiac");
     		z.appendChild(t);
    		document.getElementById("tr"+i).appendChild(z);
-		}
-				
-		
+			}
+		else{
+			var y = document.createElement("tr");
+   			y.setAttribute("id", "tr"+i);
+   			document.getElementById("tbody1").appendChild(y);
 
-		
+   			var z = document.createElement("td");
+    			var t = document.createTextNode(objArray[i].surname+ " " +objArray[i].givenname);
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
+			
+			var z = document.createElement("td");
+    			var t = document.createTextNode(objArray[i].sby + "/" + objArray[i].sbm + "/" + objArray[i].sbd);
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
+			
+			var z = document.createElement("td");
+    			var t = document.createTextNode((2018 - objArray[i].sby)+1);
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
+			
+			var z = document.createElement("td");
+    			var t = document.createTextNode("Chinese zodiac");
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
+				
+		}
+
+		}
 	}
 	
 			
