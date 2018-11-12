@@ -228,7 +228,7 @@ function genObjectArray() {
 	divContent += "</ol>";
 	document.getElementById("div2").innerHTML = divContent;
 }
-
+	//generates a table on click
 	function genTable(){
 		var t = document.createElement("table");
 		t.setAttribute("id","table1");
@@ -246,25 +246,25 @@ function genObjectArray() {
 		var head = document.getElementById("thead1");
 		head.appendChild(r);
 		
-		var title1 = document.createElement("th");
+		var title1 = document.createElement("td");
 		h.setAttribute("id","title1");
 		var node = document.createTextNode("Local Name");
 		title1.appendChild(node);
 		document.getElementById("hrow1").appendChild(title1);
 		
-		var title2 = document.createElement("th");
+		var title2 = document.createElement("td");
 		h.setAttribute("id","title2");
 		var node = document.createTextNode("Local DOB");
 		title2.appendChild(node);
 		document.getElementById("hrow1").appendChild(title2);
 		
-		var title3 = document.createElement("th");
+		var title3 = document.createElement("td");
 		h.setAttribute("id","title3");
 		var node = document.createTextNode("Local Age");
 		title3.appendChild(node);
 		document.getElementById("hrow1").appendChild(title3);
 		
-		var title4 = document.createElement("th");
+		var title4 = document.createElement("td");
 		h.setAttribute("id","title4");
 		var node = document.createTextNode("Local Zodiac");
 		title4.appendChild(node);
@@ -277,29 +277,29 @@ function genObjectArray() {
 		
 		for (var i = 0; i < objArray.length; i++){
 			if(objArray[i].country == "USA"){
-		var y = document.createElement("tr");
-   		y.setAttribute("id", "tr"+i);
-   		document.getElementById("tbody1").appendChild(y);
+			var y = document.createElement("tr");
+   			y.setAttribute("id", "tr"+i);
+   			document.getElementById("tbody1").appendChild(y);
 
-   		var z = document.createElement("td");
-    		var t = document.createTextNode(objArray[i].givenname+ " " +objArray[i].surname);
-    		z.appendChild(t);
-   		document.getElementById("tr"+i).appendChild(z);
+   			var z = document.createElement("td");
+    			var t = document.createTextNode(objArray[i].givenname+ " " +objArray[i].surname);
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
 			
-		var z = document.createElement("td");
-    		var t = document.createTextNode(objArray[i].sbm + "/" + objArray[i].sbd + "/" + objArray[i].sby);
-    		z.appendChild(t);
-   		document.getElementById("tr"+i).appendChild(z);
+			var z = document.createElement("td");
+    			var t = document.createTextNode(objArray[i].sbm + "/" + objArray[i].sbd + "/" + objArray[i].sby);
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
 			
-		var z = document.createElement("td");
-    		var t = document.createTextNode(2018 - objArray[i].sby);
-    		z.appendChild(t);
-   		document.getElementById("tr"+i).appendChild(z);
+			var z = document.createElement("td");
+    			var t = document.createTextNode(2018 - objArray[i].sby);
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
 			
-		var z = document.createElement("td");
-    		var t = document.createTextNode("American zodiac");
-    		z.appendChild(t);
-   		document.getElementById("tr"+i).appendChild(z);
+			var z = document.createElement("td");
+    			var t = document.createTextNode("American zodiac");
+    			z.appendChild(t);
+   			document.getElementById("tr"+i).appendChild(z);
 			}
 		else{
 			var y = document.createElement("tr");
